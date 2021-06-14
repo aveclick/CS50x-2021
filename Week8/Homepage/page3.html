@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Random password</title>
+        <script>
+            const generatePassword = length => {
+  document.querySelector("#password").innerHTML = createPassword(length);
+}
+
+const createPassword = length => {
+  const lowercase = "abcdefghijklmnopqrstuvwxyz";
+  const uppercase = lowercase.toUpperCase();
+  const numbers = "0123456789";
+  
+  const [lower, upper, num] = [
+    Math.ceil(length/3),
+    Math.ceil(length/3),
+    length - 2 * Math.ceil(length/3),
+  ]
+  
+  const passwordCharacters = shuffle([
+    ...getCharacters(lower, lowercase),
+    ...getCharacters(upper, uppercase),
+    ...getCharacters(num, numbers)
+  ]);
+  
+  const password = passwordCharacters.join("");
+  
+  return password;
+}
+
+const getCharacters = (length, string) => {
+  let characters = [];
+  for(let i = 0; i < length; i++) {
+    let random = Math.floor(Math.random() * string.length);
+    characters[i] = string.charAt(random);
+  }
+  return characters;
+}
+
+const shuffle = array => {
+  return array.sort(() => Math.random() - 0.5);
+}
+        </script>
+    </head>
+<body>
+    <div class="container">
+        <a href="index.html"><h4>Click here to generate something else</h4></a>
+        <h1>Generate your password!</h1>
+        <div id="password">Password</div>
+        <div class="action">
+            <button id="generate" onclick="generatePassword(9);">Generate</button>
+        </div>
+    </div>
+</body>
+</html>
