@@ -26,6 +26,12 @@ On this page you'll see the red button named "Generate". Click on it and you'll 
 
 ![password page](/screenshots/password.PNG) 
 
+# Setup
+# Первый запуск
+```
+git clone https://github.com/aveclick/CS50x-2021.git
+```
+
 # Finally
 Thanks for [CS50x 2021](https://cs50.harvard.edu/x/2021/)
 On the course I gained irreplaceable knowledge about different programming languages as Scratch, C, Python, JavaScript. Also I found out about SQL, HTML, CSS and Flask. I think that this course is indispensable for beginners in programming.
