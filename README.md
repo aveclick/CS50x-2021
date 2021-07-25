@@ -17,7 +17,7 @@ On this page you'll see the red button named "Generate". Click on it and you'll 
 ![number page](/screenshots/number.PNG) 
 
 ## Generate a russian name Page
-On this page you can choose the first letter of name, the first letter of patronymic and the gender: there are two options: male and female. There are two buttons: "Generate" and "Random" respectively to generate the name based on your options and randomly. If you click on the button "Generate" it will replaced with "Again".
+On this page you can choose the first letter of name, the first letter of patronymic and the gender: there are two options: male and female. There are two buttons: "Generate" and "Random" respectively to generate the name based on your options and randomly. If you click on the button "Generate" it will be replaced with "Again".
 
 ![name page](/screenshots/name.PNG) 
 
