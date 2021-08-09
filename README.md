@@ -27,7 +27,6 @@ On this page you'll see the red button named "Generate". Click on it and you'll 
 ![password page](/screenshots/password.PNG) 
 
 # Setup
-# Первый запуск
 ```
 git clone https://github.com/aveclick/CS50x-2021.git
 ```
